@@ -1,7 +1,7 @@
 import React, { useState, Profiler } from "react";
 import Item from "./Item";
 
-let num = 10000;
+let num = 100;
 const array = new Array(num).fill(null).map((_, i) => {
   return { id: i, name: `todo: ${i}` };
 });
@@ -16,11 +16,17 @@ export const App = () => {
 
   return (
     <Profiler id="react-pf" onRender={logTimes}>
-      <div>
+      <div style={{ padding: "30px" }}>
         <h1 style={{ marginBottom: "20px" }}>Performance measurement</h1>
         <input onChange={(e) => setText(e.target.value)} />
-        <span style={{ marginBottom: 30 }}>text: {text}</span>
-        <ul style={{ display: "flex", flexWrap: "wrap" }}>
+        <ul
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            listStyle: "none",
+            padding: 0,
+          }}
+        >
           {array.map((item) => {
             return (
               <li style={{ margin: 10 }} key={item.id}>
