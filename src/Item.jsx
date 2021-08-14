@@ -9,6 +9,7 @@ const Item = ({ name }) => {
         padding: "1px 10px",
         background: "red",
         listStyle: "none",
+        boxShadow: "0px 4px 8px rgba(103, 110, 144, 0.15)",
       }}
     >
       <strong>{name}</strong>
