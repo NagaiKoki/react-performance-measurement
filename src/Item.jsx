@@ -16,5 +16,5 @@ const Item = ({ name }) => {
   );
 };
 
-export default memo(Item);
-// export default Item;
+// export default memo(Item);
+export default Item;
